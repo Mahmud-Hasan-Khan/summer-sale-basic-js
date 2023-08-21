@@ -40,7 +40,7 @@
                     <h2 class="text-4xl font-semibold pb-8">Kitchenware</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
                         <!-- card 1 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod1.png" alt="Shoes" class="rounded-xl object-cover" />
                             </figure>
@@ -56,11 +56,11 @@
                                     <p class="inline"></p>
                                 </div>
                                 <h2 class="text-xl font-semibold">K. Accessories</h2>
-                                <p class="text-[#838383] text-xl">39.00 TK</p>
+                                <p class="text-[#838383] text-xl">39.10 TK</p>
                             </div>
                         </div>
                         <!-- card 2 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="p-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod2.png" alt="" class="rounded-xl object-cover" />
                             </figure>
@@ -76,11 +76,11 @@
                                     <p class="inline"></p>
                                 </div>
                                 <h2 class="text-xl font-semibold">K. Accessories</h2>
-                                <p class="text-[#838383] text-xl">25.00 TK</p>
+                                <p class="text-[#838383] text-xl">25.50 TK</p>
                             </div>
                         </div>
                         <!-- card 3 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod3.png" alt="Home Cooker" class="rounded-xl object-cover" />
                             </figure>
@@ -106,7 +106,7 @@
                     <h2 class="text-4xl font-semibold pb-8">Sportswear</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
                         <!-- card 4 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod4.png" alt="Sports Back Cap" class="rounded-xl object-cover" />
                             </figure>
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <!-- card 5 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="p-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod5.png" alt="Full Jersey Set" class="rounded-xl object-cover" />
                             </figure>
@@ -146,7 +146,7 @@
                             </div>
                         </div>
                         <!-- card 6 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod6.png" alt="Sports cates" class="rounded-xl object-cover" />
                             </figure>
@@ -172,7 +172,7 @@
                     <h2 class="text-4xl font-semibold pb-8">Furniture</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
                         <!-- card 7 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod7.png" alt="Single Relax Chair"
                                     class="rounded-xl object-cover" />
@@ -193,7 +193,7 @@
                             </div>
                         </div>
                         <!-- card 8 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="p-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod8.png" alt="Children play" class="rounded-xl object-cover" />
                             </figure>
@@ -213,7 +213,7 @@
                             </div>
                         </div>
                         <!-- card 9 -->
-                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg">
+                        <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
                                 <img src="./images/prod9.png" alt="Flexible Sofa" class="rounded-xl object-cover" />
                             </figure>
@@ -229,42 +229,75 @@
                                     <p class="inline"></p>
                                 </div>
                                 <h2 class="text-xl font-semibold">Flexible Sofa</h2>
-                                <p class="text-[#838383] text-xl">339.00 TK</p>
+                                <p class="text-[#838383] text-xl">339.50 TK</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- selected item container -->
+
+            <!-- cart container -->
             <div class="w-auto">
+                <!-- coupon section -->
                 <div class="card w-auto bg-base-100 shadow-xl rounded-lg mt-[70px]">
-                    <!-- <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
-                        <img src="./images/prod1.png" alt="Shoes" class="rounded-xl object-cover" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <div class="">
-                            <p class="text-xl text-[#FFC107]">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </p>
-                            <p class="inline"></p>
-                        </div>
-                        <h2 class="text-xl font-semibold">K. Accessories</h2>
-                        <p class="text-[#838383] text-xl">39.00 TK</p>
-                    </div> -->
-
-
-                    <div class="form-control">
+                    <h2 class="text-2xl font-medium pl-6 pt-6">Have coupon?</h2>
+                    <div class="form-control p-6">
                         <label class="input-group ">
-                            <input id="coupon-input-field" type="text" placeholder="Coupon code" class="p-4" />
+                            <input id="coupon-input-field" type="text" placeholder="Coupon code" class="p-4 border" />
                             <button disabled id="btn-coupon"
                                 class="bg-[#E527B2] text-xl font-semibold text-white py-4 px-5  cursor-not-allowed">Apply</button>
                         </label>
                     </div>
                 </div>
+
+                <!-- selected item section -->
+                <div class="card w-auto bg-base-100 shadow-xl rounded-lg my-6 p-6 relative">
+                    <div id="selected-items">
+
+                    </div>
+                    <div class="divider"></div>
+                    <div class="cart-box space-y-4">
+                        <h5 class="text-2xl font-medium">Total Price: <span id="total-price">00</span> TK</h5>
+                        <h5 id="discount" class="text-2xl font-medium">Discount: 00 TK</h5>
+                        <h5 id="total" class="text-2xl font-medium">Total Price: 00 TK</h5>
+                    </div>
+                    <div class="divider"></div>
+                    <button disabled onclick="my_modal_1.showModal()" id="btn-purchase"
+                        class="bg-[#E527B2] text-white text-xl font-semibold py-4 rounded-lg w-[87%] absolute -bottom-6">Make
+                        Purchase</button>
+
+                    <!-- <button class="btn">open modal</button> -->
+                    <dialog id="my_modal_1" class="modal">
+                        <form method="dialog" class="modal-box">
+                            <div class="text-center">
+
+                            </div>
+                            <h3 class="font-bold text-lg">Hello!</h3>
+                            <p class="py-4">Press ESC key or click the button below to close</p>
+                            <div class="modal-action">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </div>
+                        </form>
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img class="object-cover" src="./images/congo.png" alt="">
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title">Congratulations</h2>
+                                <p>Your Purchase the product</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-primary">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+
+
+
+                </div>
+
             </div>
         </section>
     </main>
