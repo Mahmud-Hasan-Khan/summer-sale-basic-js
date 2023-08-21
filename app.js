@@ -32,7 +32,7 @@ document.getElementById("btn-coupon").addEventListener('click', function () {
         document.getElementById('discount').innerText = discount;
         document.getElementById('total').innerText = discountPrice;
     } else {
-        alert("Please provide proper Coupon Code")
+        alert("You Have Provided Wrong Coupon Code!, Please provide proper Coupon Code")
     }
     couponInputField.value = "";
 })
