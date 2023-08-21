@@ -15,6 +15,7 @@ function handleAddToCart(target) {
     total = parseFloat(total) + parseFloat(itemPrice);
     const totalPrice = parseFloat(total).toFixed(2);
     document.getElementById('total-price').innerText = totalPrice;
+    document.getElementById('total').innerText = totalPrice;
 
     updateButtonState();
     applyCoupon();
