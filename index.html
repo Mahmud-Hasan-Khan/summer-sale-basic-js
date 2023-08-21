@@ -38,7 +38,7 @@
                 <!--  Kitchenware-->
                 <div class="mb-12">
                     <h2 class="text-4xl font-semibold pb-8">Kitchenware</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 lg:gap-6">
                         <!-- card 1 -->
                         <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
@@ -104,7 +104,7 @@
                 <!-- Sportswear -->
                 <div class="mb-12">
                     <h2 class="text-4xl font-semibold pb-8">Sportswear</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 lg:gap-6">
                         <!-- card 4 -->
                         <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
@@ -170,7 +170,7 @@
                 <!-- Furniture -->
                 <div class="mb-12">
                     <h2 class="text-4xl font-semibold pb-8">Furniture</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 lg:gap-6">
                         <!-- card 7 -->
                         <div class="card w-auto bg-base-100 shadow-xl rounded-lg" onclick="handleAddToCart(this)">
                             <figure class="px-10 py-10 bg-[#f3f3f3] m-5 rounded-none">
@@ -245,7 +245,7 @@
                         <label class="input-group ">
                             <input id="coupon-input-field" type="text" placeholder="Coupon code" class="p-4 border" />
                             <button disabled id="btn-coupon"
-                                class="bg-[#E527B2] text-xl font-semibold text-white py-4 px-5  cursor-not-allowed">Apply</button>
+                                class="bg-[#E527B2] text-xl font-semibold text-white py-4 px-5 disabled:bg-gray-200">Apply</button>
                         </label>
                     </div>
                 </div>
@@ -258,46 +258,32 @@
                     <div class="divider"></div>
                     <div class="cart-box space-y-4">
                         <h5 class="text-2xl font-medium">Total Price: <span id="total-price">00</span> TK</h5>
-                        <h5 id="discount" class="text-2xl font-medium">Discount: 00 TK</h5>
-                        <h5 id="total" class="text-2xl font-medium">Total Price: 00 TK</h5>
+                        <h5 class="text-2xl font-medium">Discount: <span id="discount">00</span> TK</h5>
+                        <h5 class="text-2xl font-medium">Total: <span id="total">00</span> TK</h5>
                     </div>
                     <div class="divider"></div>
                     <button disabled onclick="my_modal_1.showModal()" id="btn-purchase"
-                        class="bg-[#E527B2] text-white text-xl font-semibold py-4 rounded-lg w-[87%] absolute -bottom-6">Make
+                        class="bg-[#E527B2] text-white text-xl font-semibold py-4 rounded-lg w-[87%] absolute -bottom-6 disabled:bg-gray-200">Make
                         Purchase</button>
 
-                    <!-- <button class="btn">open modal</button> -->
+                    <!-- open modal -->
                     <dialog id="my_modal_1" class="modal">
-                        <form method="dialog" class="modal-box">
-                            <div class="text-center">
-
-                            </div>
-                            <h3 class="font-bold text-lg">Hello!</h3>
-                            <p class="py-4">Press ESC key or click the button below to close</p>
-                            <div class="modal-action">
-                                <!-- if there is a button in form, it will close the modal -->
-                                <button class="btn">Close</button>
-                            </div>
-                        </form>
                         <div class="card w-96 bg-base-100 shadow-xl">
                             <figure class="px-10 pt-10">
                                 <img class="object-cover" src="./images/congo.png" alt="">
                             </figure>
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title">Congratulations</h2>
-                                <p>Your Purchase the product</p>
-                                <div class="card-actions">
-                                    <button class="btn btn-primary">Buy Now</button>
+                                <h2 class="text-5xl font-bold ">Congratulations</h2>
+                                <p class="mt-4">You Have Purchase the product</p>
+                                <div class="modal-actions mt-6">
+                                    <button onclick="goHome()"
+                                        class="bg-[#E527B2] text-white text-xl font-semibold px-4 py-2 rounded-lg">Go
+                                        Home</button>
                                 </div>
                             </div>
                         </div>
                     </dialog>
-
-
-
-
                 </div>
-
             </div>
         </section>
     </main>

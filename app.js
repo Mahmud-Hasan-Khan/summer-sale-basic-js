@@ -17,30 +17,49 @@ function handleAddToCart(target) {
     document.getElementById('total-price').innerText = totalPrice;
 
     updateButtonState();
+    applyCoupon();
 }
 
-// document.getElementById("btn-purchase").addEventListener('click', function () {
-//     if (total > 0) {
-//         // document.getElementById("btn-purchase").setAttribute('disabled', true);
-//         document.getElementById("btn-purchase").removeAttribute('disabled');
-//     }
-// })
+// apply coupon (20% discount) when price is more than 200 tk
+document.getElementById("btn-coupon").addEventListener('click', function () {
+    console.log('clicked');
+    const couponInputField = document.getElementById('coupon-input-field');
+    const couponValue = couponInputField.value;
+    if (couponValue === "SELL200") {
+        const discount = parseFloat(total * 0.20).toFixed(2);
+        const discountPrice = parseFloat(total - discount).toFixed(2);
 
-document.getElementById("btn-purchase").addEventListener('click', function () {
-    // Your purchase logic here
-});
-
-function updateButtonState() {
-    if (total > 0) {
-        document.getElementById("btn-purchase").removeAttribute('disabled');
-        console.log('ccccc');
+        document.getElementById('discount').innerText = discount;
+        document.getElementById('total').innerText = discountPrice;
     } else {
-        document.getElementById("btn-purchase").setAttribute('disabled', true);
+        alert("Please provide proper Coupon Code")
+    }
+    couponInputField.value = "";
+})
 
+
+// "Apply Coupon" button Disable & Enable
+function applyCoupon() {
+    if (total >= 200) {
+        document.getElementById("btn-coupon").removeAttribute('disabled');
+    } else {
+        document.getElementById("btn-coupon").setAttribute('disabled', true);
     }
 }
 
-// Call this function whenever the total changes
+// "Make Purchase" Button Disable & Enable
+function updateButtonState() {
+    if (total > 0) {
+        document.getElementById("btn-purchase").removeAttribute('disabled');
+    } else {
+        document.getElementById("btn-purchase").setAttribute('disabled', true);
+    }
+}
 updateButtonState();
+
+// Reload page after clicking modal "Go Home" button
+function goHome() {
+    location.reload();
+}
 
 
